@@ -1,5 +1,7 @@
 # Dataset for multi-server multi-user offloading problem
 
+The data that has been produced are open source at https://dx.doi.org/10.21227/386p-7h83
+
 ## Numerical range
 
 Regarding the bandwidth setting of the OMA mechanism, many routers now use the 802.11ac protocol, where the bandwidth can be as high as 80MHz, and the common ones are 20MHz, 60MHz, etc. Based on previous dataset assumptions, 0.5MH and 20MHz were tried, and the calculated uplink rate did not exceed 1Mbps, which is not realistic at all (even using a 2019 4G mobile phone to connect to WiFi, the average large file upload rate is as high as 2.6MB /s≈21.8Mbps), the most serious thing is that this will limit the input data size of the computing task. We can only set a very small task data size to avoid excessive transmission costs, but this is actually contradictory to the assumption of offloading of computationally intensive tasks. Therefore, the bandwidth is set to **80MHz**, so that the transmission rate is basically above 1Mbps. Specifically, the size of task input should be satisfy that in most cases, local execution will timeout, while offloaded execution can reach the latency requirement: 
